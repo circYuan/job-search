@@ -16,7 +16,6 @@ def main():
     http = urllib3.PoolManager()
 
     for page in range(1, pages + 1):
-        print(page)
         url = "https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={job}&expansionType=area%2Cspec%2" \
                 "Ccom%2Cjob%2Cwf%2Cwktm&order=15&asc=0&page={page}&mode=s&jobsource=2018indexpoc".format(job = job, page = page)
         r = http.request("GET", url)
