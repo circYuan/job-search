@@ -63,6 +63,7 @@ def wrapCSVRow(jobName, jobCompany, date, requestSkill, salary, addr, job_type, 
     csvRows.append([jobName, jobCompany, date, requestSkill, salary, addr, job_type, content])
 
 def writeCSV(job):
+    global csvRows
     with open(job + "_work.csv", "w", newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(["職缺", "職缺公司", "職缺日期", "職缺技術", "薪水", "工作地點", "職務類別", "內容"])
